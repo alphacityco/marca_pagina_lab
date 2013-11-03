@@ -15,8 +15,11 @@ build :
 emulate :
 	cordova emulate android
 
-server :
-	cordova serve android
-
 run :
 	cordova run android
+
+cserver :
+	cordova serve android
+
+wserver :
+	@cd web; grunt server;
