@@ -1,5 +1,7 @@
 
-@MarcaPagina = angular.module('MarcaPagina', ['ngResource']).config ['$routeProvider', ($routeProvider) ->
+@MarcaPagina = angular.module('MarcaPagina', ['Cordova', 'WordPressAPI'])
+
+@MarcaPagina.config ['$routeProvider', ($routeProvider) ->
 
     $routeProvider.when '/',
         templateUrl: 'views/main.html'
