@@ -3,6 +3,8 @@ www
 
 # generated files - android project subfolder
 platforms/android
+# merges/android
+plugins
 
 # OSX
 .DS_Store
