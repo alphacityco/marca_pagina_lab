@@ -1,31 +1,8 @@
-# built application files
-*.apk
-*.ap_
-*.ap_.*
-
-# files for the dex VM
-*.dex
-
-# Java class files
-*.class
-
 # generated files - grunt project
-www/
+www
 
 # generated files - android project subfolder
-platforms/android/bin/
-platforms/android/gen/
-platforms/android/assets/
-
-# generated files - cordova project
-bin/
-gen/
-
-# Local configuration file (sdk path, etc)
-local.properties
+platforms/android
 
 # OSX
 .DS_Store
-
-# Thumbnails
-._*
