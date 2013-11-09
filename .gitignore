@@ -1,9 +1,9 @@
 # generated files - grunt project
 www
 
-# generated files - android project subfolder
+# generated files - android project
 platforms/android
-# merges/android
+merges/android
 plugins
 
 # OSX

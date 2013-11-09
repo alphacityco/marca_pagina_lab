@@ -8,6 +8,11 @@ usage :
 	@echo 'make run                     : Send app to a connected device'
 	@echo ''
 
+setup :
+	@cd web; npm install; bower install; grunt build;
+	mkdir merges platforms plugins
+	cordova platform add android
+
 build :
 	@cd web; grunt build;
 	cordova build android
