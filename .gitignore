@@ -2,8 +2,8 @@
 www
 
 # generated files - android project
-platforms/android
-merges/android
+platforms
+merges
 plugins
 
 # OSX

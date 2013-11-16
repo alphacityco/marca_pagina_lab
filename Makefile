@@ -9,7 +9,10 @@ usage :
 	@echo ''
 
 setup :
+	rm -rf www
+	mkdir www
 	@cd web; npm install; bower install; grunt build;
+	rm -rf merges platforms plugins
 	mkdir merges platforms plugins
 	cordova platform add android
 
