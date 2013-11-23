@@ -1,22 +1,44 @@
-body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+.mpagina-navigation-bar {
+  background: #dc2a4d;
+}
+.mpagina-navigation-bar h1 {
+  color: #fff;
+  font-size: 2em;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
+.mpagina-nav__list__item {
+  padding: 0;
+}
+.mpagina-nav__button {
+  color: #454545;
+  padding: 0;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+}
+.mpagina-nav__button span {
+  font-size: 1.5em;
+  display: inline;
+  vertical-align: middle;
+}
+.mpagina-nav__button img {
+  display: inline;
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+}
+.mpagina-nav__button:active {
+  background-color: #454545;
+  color: #e5e9e8;
 }
 
-.hero-unit h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+
+.mpagina-spinner {
+  background: url("../images/spinner.png") no-repeat;
+  text-align: center;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi) {
+  .spinner {
+    background: url("../images/spinner.png") no-repeat;
+  }
 }

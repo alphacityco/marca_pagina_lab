@@ -7,23 +7,26 @@
 
 ]
 
-@WordPressAPI.factory 'WPAPIService', ['$http', ($http) ->
+@WordPressAPI.factory 'WPAPIService', ['$http',
+  ($http) ->
 
-  API_URL = 'http://apiedepagina.com/api'
+    JSONP_SUFIX = 'callback=JSON_CALLBACK'
 
-  info: ({success, error}) ->
-    $http.jsonp("#{API_URL}/info/?callback=JSON_CALLBACK")
-    .success(success)
-    .error(error)
+    (api_url) ->
 
-  getPosts: ({success, error}) ->
-    $http.jsonp("#{API_URL}/get_recent_posts/?callback=JSON_CALLBACK")
-    .success(success)
-    .error(error)
+      info: ({success, error}) ->
+        $http.jsonp("#{api_url}/info/?#{JSONP_SUFIX}")
+        .success(success)
+        .error(error)
 
-  getPost: (postId, {success, error}) ->
-    $http.jsonp("#{API_URL}/get_post/?callback=JSON_CALLBACK&post_id=#{postId}")
-    .success(success)
-    .error(error)
+      getPosts: ({success, error}) ->
+        $http.jsonp("#{api_url}/get_recent_posts/?#{JSONP_SUFIX}")
+        .success(success)
+        .error(error)
+
+      getPost: (postId, {success, error}) ->
+        $http.jsonp("#{api_url}/get_post/?post_id=#{postId}&#{JSONP_SUFIX}")
+        .success(success)
+        .error(error)
 
 ]

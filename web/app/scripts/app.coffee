@@ -1,5 +1,5 @@
 
-@MarcaPagina = angular.module('MarcaPagina', ['Cordova', 'WordPressAPI'])
+@MarcaPagina = angular.module('MarcaPagina', ['WordPressAPI', 'PostItem'])
 
 @MarcaPagina.config ['$routeProvider', ($routeProvider) ->
 

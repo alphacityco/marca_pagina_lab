@@ -1,17 +1,15 @@
 
-@MainCtrl = @MarcaPagina.controller 'MainCtrl', ['$scope','WPAPIService',
+@MainCtrl = @MarcaPagina.controller 'MainCtrl', ['$scope', 'WPAPIService',
   ($scope, WPAPIService) ->
 
-    $scope.awesomeThings = ['HTML5 Boilerplate', 'AngularJS', 'Karma']
+    API_URL = 'http://apiedepagina.com/api'
 
     $scope.posts = []
 
-    WPAPIService.getPosts
-      success: (data) ->
-        alert data.count
-        console.log data
-        $scope.posts = data.posts
-      error: ->
-        alert "ERROR"
+    wpApiService = new WPAPIService API_URL
+
+    wpApiService.getPosts
+      success: (wpApiResponse) ->
+        $scope.posts = wpApiResponse.posts
 
 ]

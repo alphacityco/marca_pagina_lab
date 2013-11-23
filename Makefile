@@ -11,7 +11,7 @@ usage :
 setup :
 	rm -rf www
 	mkdir www
-	@cd web; npm install; bower install; grunt build;
+	@cd web; npm install; bower install; grunt build --force;
 	rm -rf merges platforms plugins
 	mkdir merges platforms plugins
 	cordova platform add android
