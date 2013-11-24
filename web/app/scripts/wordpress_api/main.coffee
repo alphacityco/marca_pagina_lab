@@ -20,6 +20,11 @@
         .error(error)
 
       getPosts: ({success, error}) ->
+        $http.jsonp("#{api_url}/get_posts/?#{JSONP_SUFIX}")
+        .success(success)
+        .error(error)
+
+      getRecentPosts: ({success, error}) ->
         $http.jsonp("#{api_url}/get_recent_posts/?#{JSONP_SUFIX}")
         .success(success)
         .error(error)

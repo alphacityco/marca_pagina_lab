@@ -1,11 +1,11 @@
 
-@MarcaPagina = angular.module('MarcaPagina', ['WordPressAPI', 'PostItem'])
+@MarcaPagina = angular.module('MarcaPagina', ['WordPressAPI'])
 
 @MarcaPagina.config ['$routeProvider', ($routeProvider) ->
 
     $routeProvider.when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
+        controller: 'HomeCtrl'
+        templateUrl: 'scripts/home/index.html'
     .otherwise
         redirectTo: '/'
 
