@@ -1,7 +1,7 @@
 
 @HomeCtrl = @MarcaPagina.controller 'HomeCtrl', ['$scope', 'WPAPIService'
   ($scope, WPAPIService) ->
-    alert "hola"
+
     API_URL = 'http://apiedepagina.com/api'
 
     $scope.posts = []

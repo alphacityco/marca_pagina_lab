@@ -16,7 +16,6 @@
       </li>
     """
     link: (scope, element, attrs) ->
-      alert "holaddd"
       post = new Post scope.post
       scope.thumbnail = post.getThumbnail()
 
