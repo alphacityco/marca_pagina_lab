@@ -17,7 +17,7 @@ setup :
 	cordova platform add android
 
 build :
-	@cd web; grunt build;
+	@cd web; grunt build --force;
 	cordova build android
 
 emulate :

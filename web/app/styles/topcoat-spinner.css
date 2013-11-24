@@ -25,12 +25,12 @@ limitations under the License.
   width: 36px;
   height: 36px;
   margin: 5px;
-  background: url("../../test/fixtures/img/spinner.png") no-repeat;
+  background: url("../images/spinner.png") no-repeat;
   -webkit-animation: spinner 1s infinite linear;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi) {
   .spinner {
-    background: url("../../test/fixtures/img/spinner2x.png") no-repeat;
+    background: url("../images/spinner2x.png") no-repeat;
     background-size: 36px;
   }
 }

@@ -2599,7 +2599,7 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #c6c8c8;
   padding: 0 0 0 2rem;
   border-radius: 30px;
-  background-image: url("../img/search.svg");
+  background-image: url("../images/search.svg");
   background-position: 1rem center;
   background-repeat: no-repeat;
   background-size: 16px;
@@ -3525,18 +3525,18 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @font-face {
   font-family: "Source Sans";
-  src: url("../font/SourceSansPro-Regular.otf");
+  src: url("fonts/SourceSansPro-Regular.otf");
 }
 
 @font-face {
   font-family: "Source Sans";
-  src: url("../font/SourceSansPro-Light.otf");
+  src: url("fonts/SourceSansPro-Light.otf");
   font-weight: 200;
 }
 
 @font-face {
   font-family: "Source Sans";
-  src: url("../font/SourceSansPro-Semibold.otf");
+  src: url("fonts/SourceSansPro-Semibold.otf");
   font-weight: 600;
 }
 
@@ -3555,7 +3555,7 @@ body {
 }
 
 .topcoat-icon--menu-stack {
-  background: url("../img/hamburger_light.svg") no-repeat;
+  background: url("../images/hamburger_light.svg") no-repeat;
   background-size: cover;
 }
 

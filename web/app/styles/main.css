@@ -31,14 +31,3 @@
   background-color: #454545;
   color: #e5e9e8;
 }
-
-
-.mpagina-spinner {
-  background: url("../images/spinner.png") no-repeat;
-  text-align: center;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi) {
-  .spinner {
-    background: url("../images/spinner.png") no-repeat;
-  }
-}
