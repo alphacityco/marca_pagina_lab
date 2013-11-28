@@ -1,12 +1,20 @@
 
-@MarcaPagina = angular.module('MarcaPagina', ['WordPressAPI'])
+@MarcaPagina = angular.module('MarcaPagina', ['ui.router', 'WordPressAPI'])
 
-@MarcaPagina.config ['$routeProvider', ($routeProvider) ->
+@MarcaPagina.config ['$stateProvider',
+  ($stateProvider) ->
 
-    $routeProvider.when '/',
-        controller: 'HomeCtrl'
+    $stateProvider
+      .state 'home',
+        url: '/'
         templateUrl: 'scripts/home/index.html'
-    .otherwise
-        redirectTo: '/'
+        controller: 'HomeCtrl'
+
+]
+
+@MarcaPagina.controller 'Init', ['$state',
+  ($state) ->
+
+    $state.transitionTo 'home'
 
 ]
