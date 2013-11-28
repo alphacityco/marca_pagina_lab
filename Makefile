@@ -20,6 +20,9 @@ build :
 	@cd web; grunt build --force;
 	cordova build android
 
+gbuild :
+	@cd web; grunt build --force;
+
 emulate :
 	cordova emulate android
 

@@ -6,9 +6,17 @@
 
     $stateProvider
       .state 'home',
-        url: '/'
         templateUrl: 'scripts/home/index.html'
-        controller: 'HomeCtrl'
+        controller:  'HomeCtrl'
+
+      .state 'home.postIndex',
+        templateUrl: 'scripts/post/index.html'
+        controller: 'PostIndexCtrl'
+
+      .state 'home.postShow',
+        templateUrl: 'scripts/post/show.html'
+        controller: 'PostShowCtrl'
+
 
 ]
 

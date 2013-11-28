@@ -1,6 +1,6 @@
 
-@HomeCtrl = @MarcaPagina.controller 'HomeCtrl', ['$scope', 'WPAPIService'
-  ($scope, WPAPIService) ->
+@HomeCtrl = @MarcaPagina.controller 'HomeCtrl', ['$scope', '$state', 'WPAPIService',
+  ($scope, $state, WPAPIService) ->
 
     API_URL = 'http://apiedepagina.com/api'
 
@@ -10,5 +10,7 @@
     wpApiService.getPosts
       success: (wpApiResponse) ->
         $scope.posts = wpApiResponse.posts
+
+    $state.transitionTo 'home.postIndex'
 
 ]
