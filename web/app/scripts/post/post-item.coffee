@@ -7,18 +7,17 @@
     replace: true
     scope:
       post: '='
+      onClick: '='
     template: """
       <li class="topcoat-list__item mpagina-nav__list__item">
-        <a ng-click="hello()" class="mpagina-nav__button">
-          <img src="{{thumbnail.url}}">
+        <a ng-click="postClick(post)" class="mpagina-nav__button">
+          <img src="{{post.getThumbnailUrl()}}">
           <span>{{post.title}}</span>
         </a>
       </li>
     """
     link: (scope, element, attrs) ->
-      post = new Post scope.post
-      scope.thumbnail = post.getThumbnail()
+      scope.post = new Post scope.post
 
-      scope.hello = ->
-        alert post.title
+      scope.postClick = (post) -> scope.onClick post
 ]

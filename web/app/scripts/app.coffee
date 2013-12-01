@@ -14,6 +14,7 @@
         controller: 'PostIndexCtrl'
 
       .state 'home.postShow',
+        url: '/posts/:post_id'
         templateUrl: 'scripts/post/show.html'
         controller: 'PostShowCtrl'
 

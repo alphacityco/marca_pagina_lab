@@ -5,7 +5,8 @@
 <div class="topcoat-list" ng-show="posts.length">
   <ul class="topcoat-list__container">
 
-    <post-item ng-repeat="post in posts | filter: {status: 'publish'}" post="post"></post-item>
+    <post-item ng-repeat="post in posts | filter: {status: 'publish'}"
+               post="post" on-click="postShow"></post-item>
 
   </ul>
 </div>
