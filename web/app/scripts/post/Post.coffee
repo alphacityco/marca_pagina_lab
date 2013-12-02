@@ -3,10 +3,10 @@
 
     (post) ->
       angular.extend post,
-        getThumbnailUrl: ->
+        getImageUrl: (imageType = 'full') ->
           thumbnailImages = post.thumbnail_images
 
-          thumbnailImages.thumbnail.url if thumbnailImages?
+          thumbnailImages[imageType].url if thumbnailImages?
 
       post
 ]

@@ -26,7 +26,7 @@
   width: 150px;
   height: 150px;
 }
-.mpagina-nav__button:active {
-  background-color: #454545;
-  color: #e5e9e8;
+
+.mpagina-post .header img, .mpagina-post .content {
+  width: 100%;
 }

@@ -1,5 +1,12 @@
-<img src="{{post.getThumbnailUrl()}}" />
+<div class="mpagina-post">
 
-<h2>{{post.title}}</h2>
+  <div class="header">
+    <img src="{{post.getImageUrl('medium')}}" />
+    <h2>{{post.title_plain}}</h2>
+  </div>
 
-<button ng-click="goHome()" class="topcoat-button--large--cta">Go Back</button>
+  <div class="content" ng-bind-html-unsafe="post.content"></div>
+
+  <button ng-click="goHome()" class="topcoat-button--large--cta">Go Back</button>
+
+</div>
