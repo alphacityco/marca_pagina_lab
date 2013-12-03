@@ -7,6 +7,6 @@
     $scope.post = $scope.posts.getPost postId
 
     $scope.goHome = ->
-      alert "@@@@@@@@"
+      $state.transitionTo 'home.postIndex'
 
 ]
