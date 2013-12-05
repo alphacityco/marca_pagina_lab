@@ -11,7 +11,7 @@
     template: """
       <li class="topcoat-list__item mpagina-nav__list__item">
         <a ng-click="postClick(post)" class="mpagina-nav__button">
-          <img src="{{post.getImageUrl('thumbnail')}}">
+          <img ng-src="{{post.getImageUrl('thumbnail')}}">
           <span>{{post.title_plain}}</span>
         </a>
       </li>
