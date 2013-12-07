@@ -27,8 +27,8 @@ module.exports = function (grunt) {
         tasks: ['coffee:test']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['copy:styles', 'autoprefixer']
+        files: ['<%= yeoman.app %>/styles/{,*/}*.css', '<%= yeoman.app %>/styles/{,*/}*.styl'],
+        tasks: ['stylus', 'copy:styles', 'autoprefixer']
       },
       livereload: {
         options: {
@@ -184,18 +184,25 @@ module.exports = function (grunt) {
         }]
       }
     },
+    stylus: {
+      compile: {
+        files: {
+          '.tmp/styles/main.css': '<%= yeoman.app %>/styles/{,*/}*.styl'
+        }
+      }
+    },
     cssmin: {
       // By default, your `index.html` <!-- Usemin Block --> will take care of
       // minification. This option is pre-configured if you do not wish to use
       // Usemin blocks.
-      // dist: {
-      //   files: {
-      //     '<%= yeoman.dist %>/styles/main.css': [
-      //       '.tmp/styles/{,*/}*.css',
-      //       '<%= yeoman.app %>/styles/{,*/}*.css'
-      //     ]
-      //   }
-      // }
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/styles/main.css': [
+            '.tmp/styles/{,*/}*.css',
+            '<%= yeoman.app %>/styles/{,*/}*.css'
+          ]
+        }
+      }
     },
     htmlmin: {
       dist: {
@@ -252,6 +259,7 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'coffee:dist',
+        'stylus',
         'copy:styles'
       ],
       test: [
@@ -329,6 +337,7 @@ module.exports = function (grunt) {
     'copy:dist',
     'cdnify',
     'ngmin',
+    'stylus',
     'cssmin',
     'uglify',
     'rev',
