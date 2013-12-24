@@ -1,12 +1,13 @@
-@MarcaPagina.factory 'Post', [
-  ->
+@MarcaPagina.factory 'Post', ['Persistence',
+  (Persistence) ->
 
     (post) ->
-      angular.extend post,
+      _post = _.pick(post, 'id', 'status', 'url', 'title_plain', 'content', 'date', 'modified', 'author', 'categories', 'tags', 'thumbnail_images')
+
+      angular.extend new Persistence.model.Post(_post),
         getImageUrl: (imageType = 'full') ->
-          thumbnailImages = post.thumbnail_images
+          thumbnailImages = _post.thumbnail_images
 
           thumbnailImages[imageType].url if thumbnailImages?
 
-      post
 ]

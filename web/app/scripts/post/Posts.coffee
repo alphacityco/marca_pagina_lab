@@ -10,5 +10,4 @@
 
           new Post lePost
 
-      posts
 ]

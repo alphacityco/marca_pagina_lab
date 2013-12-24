@@ -10,7 +10,7 @@
       onClick: '='
     template: """
       <li class="topcoat-list__item mpagina-nav__list__item">
-        <a ng-click="postClick(post)" class="mpagina-nav__button">
+        <a ng-click="goToPost(post)" class="mpagina-nav__button">
           <img ng-src="{{post.getImageUrl('thumbnail')}}">
           <span>{{post.title_plain}}</span>
         </a>
@@ -19,5 +19,5 @@
     link: (scope, element, attrs) ->
       scope.post = new Post scope.post
 
-      scope.postClick = (post) -> scope.onClick post
+      scope.goToPost = (post) -> scope.onClick post
 ]

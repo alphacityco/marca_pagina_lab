@@ -1,8 +1,8 @@
 
-@MarcaPagina = angular.module('MarcaPagina', ['ui.router', 'WordPressAPI'])
+@MarcaPagina = angular.module('MarcaPagina', ['ui.router', 'WordPressAPI', 'Persistencejs'])
 
-@MarcaPagina.config ['$stateProvider',
-  ($stateProvider) ->
+@MarcaPagina.config ['$stateProvider', 'WPAPIServiceProvider',
+  ($stateProvider, WPAPIServiceProvider) ->
 
     $stateProvider
       .state 'home',
@@ -20,11 +20,12 @@
         templateUrl: 'scripts/post/show.html'
         controller: 'PostShowCtrl'
 
+    WPAPIServiceProvider.setUrl 'http://apiedepagina.com/api'
 
 ]
 
-@MarcaPagina.controller 'InitCtrl', ['$scope', '$state',
-  ($scope, $state) ->
+@MarcaPagina.run ['$rootScope', '$state',
+  ($rootScope, $state) ->
 
     $state.transitionTo 'home'
 
