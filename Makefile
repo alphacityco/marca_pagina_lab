@@ -2,9 +2,9 @@ usage :
 	@echo ''
 	@echo 'Core tasks                   : Description'
 	@echo '--------------------         : -----------'
-	@echo 'make build                   : Build web and cordova app'
-	@echo 'make emulate                 : Start an emulator'
-	@echo 'make server                  : Start a web server'
+	@echo 'make setup                   : Clean and create everything needed to begin'
+	@echo 'make build                   : Build grunt and cordova project'
+	@echo 'make emulate                 : Start an android emulator'
 	@echo 'make run                     : Send app to a connected device'
 	@echo ''
 
@@ -16,14 +16,11 @@ setup :
 	mkdir merges platforms plugins
 	cordova platform add android
 
+binstall :
+	@cd web; bower install;
+
 build :
 	@cd web; grunt build --force;
-	cordova build android
-
-gbuild :
-	@cd web; grunt build --force;
-
-cbuild :
 	cordova build android
 
 emulate :
@@ -32,8 +29,16 @@ emulate :
 run :
 	cordova run android
 
+gbuild :
+	@cd web; grunt build --force;
+
+gserver :
+	@cd web; grunt server;
+
+cbuild :
+	cordova build android
+
 cserver :
 	cordova serve android
 
-wserver :
-	@cd web; grunt server;
+
