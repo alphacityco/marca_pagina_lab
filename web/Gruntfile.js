@@ -187,7 +187,7 @@ module.exports = function (grunt) {
     stylus: {
       compile: {
         files: {
-          '.tmp/styles/main.css': '<%= yeoman.app %>/styles/{,*/}*.styl'
+          '<%= yeoman.dist %>/styles/main.css': '<%= yeoman.app %>/styles/{,*/}*.styl'
         }
       }
     },
@@ -197,9 +197,9 @@ module.exports = function (grunt) {
       // Usemin blocks.
       dist: {
         files: {
-          '<%= yeoman.dist %>/styles/main.css': [
-            '.tmp/styles/{,*/}*.css',
-            '<%= yeoman.app %>/styles/{,*/}*.css'
+          '<%= yeoman.dist %>/styles/modules.css': [
+            '.tmp/styles/{,*/}*.css'
+            // '<%= yeoman.app %>/styles/{,*/}*.css'
           ]
         }
       }
